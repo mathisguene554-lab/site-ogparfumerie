@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OG Parfumerie · Extraits de parfum, Paris</title>
+<meta name="description" content="OG Parfumerie, extraits de parfum de Paris. Elegance et la collection OG, à commander par téléphone ou WhatsApp.">
+<!-- ÉTAPE MISE EN LIGNE 1 : retirer cette ligne quand le site passe sur sa vraie adresse -->
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="OG Parfumerie · Extraits de parfum, Paris">
+<meta property="og:description" content="Un extrait se remarque de près. Elegance et la collection OG.">
+<!-- ÉTAPE MISE EN LIGNE 2 : passer og:image et og:url en adresse absolue -->
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FCFAF6">
+<link rel="icon" type="image/png" href="assets/favicon-og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marbre:#FCFAF6;      /* fond : blanc ivoire, jamais blanc pur */
+  --marbre-2:#FFFFFF;
+  --pierre:#F7F3EC;      /* blanc nacré, à peine plus chaud */
+  --encre:#1C1814;
+  --encre-douce:#625648;
+  --creme:#1C1814;
+  --creme-douce:#625648;
+  --or:#876427;          /* or lisible : textes, boutons */
+  --or-clair:#876427;
+  --or-ligne:#C9A35A;    /* or du logo : filets, anneaux */
+  --or-fonce:#876427;
+  --trou:#B13FD0;
+  --serif:"Cormorant Garamond", "Didot", Georgia, serif;
+  --sans:"Jost", "Futura", system-ui, sans-serif;
+  --mono:"Jost", "Futura", system-ui, sans-serif;
+  --max:1240px;
+  --g:clamp(16px,5vw,64px);
+  --filet:1px solid rgba(201,163,90,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--marbre);color:var(--encre);font-family:var(--sans);font-weight:400;font-size:16.5px;line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+.kicker{font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--or)}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.02;letter-spacing:-.005em;color:var(--encre)}
+h1 em,h2 em{font-style:italic;color:var(--or)}
+h1,h2{text-wrap:balance}
+h2{font-size:clamp(42px,6.4vw,88px)}
+h3{font-size:26px;font-weight:400}
+p{max-width:56ch;color:var(--encre-douce)}
+.trou{color:var(--trou);border-bottom:1.5px dashed var(--trou);font-style:normal;white-space:nowrap}
+.fond{display:none}
+
+/* Navigation : le nom en capitales espacées, au centre */
+.nav{position:sticky;top:0;z-index:20;background:rgba(252,250,246,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:var(--filet)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.marque{display:flex;align-items:center;gap:14px;text-decoration:none}
+.marque img{width:40px;height:40px;flex:none}
+.marque span{font-family:var(--serif);font-weight:400;font-size:19px;letter-spacing:.32em;text-transform:uppercase}
+.liens{display:flex;gap:34px;align-items:center}
+.liens a{text-decoration:none;font-size:11.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--encre-douce);transition:color .25s ease}
+.liens a:hover{color:var(--or)}
+.liens a.btn,.liens a.btn:hover{color:var(--marbre)}
+
+/* Boutons : rectangles nets, capitales espacées */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 30px;border-radius:0;font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border:1px solid var(--encre);background:var(--encre);color:var(--marbre);transition:background .3s ease,color .3s ease,border-color .3s ease;cursor:pointer}
+.btn:hover{background:var(--or);border-color:var(--or)}
+.btn.ligne{background:transparent;color:var(--encre);border-color:var(--or-ligne)}
+.btn.ligne:hover{background:transparent;border-color:var(--encre)}
+.btn svg{width:16px;height:16px}
+.nav .btn{min-height:42px;padding:0 20px;font-size:11px}
+
+/* Héros fixe : l'arrivée sur le flacon Elegance */
+.film{position:relative;background:var(--pierre)}
+.scene{position:relative;min-height:calc(100vh - 74px);min-height:calc(100svh - 74px);display:flex;align-items:flex-end;background:var(--pierre) url(assets/maison-escalier.jpg) 50% 45%/cover no-repeat}
+.legende{position:relative;margin:var(--g);max-width:min(580px,calc(100% - 2*var(--g)));background:rgba(252,250,246,.96);border:1px solid var(--or-ligne);padding:clamp(24px,3vw,42px)}
+.legende::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,163,90,.35);pointer-events:none}
+.legende h1{font-size:clamp(42px,5.4vw,76px);margin:14px 0 24px}
+.legende .actions{display:flex;flex-wrap:wrap;gap:10px;position:relative}
+
+/* À l'honneur : Sublime */
+.vedette{background:var(--pierre);border-bottom:var(--filet);padding:clamp(80px,11vw,160px) 0}
+.vedette .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,8vw,120px);align-items:center}
+.vedette h2{font-size:clamp(46px,6.4vw,92px);margin:22px 0 28px}
+.vedette h2 em{display:block}
+.vedette .chapo{font-size:17px;max-width:44ch}
+.pyramide{display:grid;grid-template-columns:repeat(3,1fr);margin:40px 0 0;border-top:var(--filet);border-bottom:var(--filet)}
+.pyramide div{padding:22px 18px 22px 0;border-right:var(--filet);margin-right:18px}
+.pyramide div:last-child{border-right:0;margin-right:0}
+.pyramide dt{font-size:10.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--or)}
+.pyramide dd{font-family:var(--serif);font-size:21px;line-height:1.3;color:var(--encre);margin-top:8px}
+.vedette-tenue{margin-top:22px;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--encre-douce)}
+.vedette .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.vedette-photo{position:relative}
+.vedette-cadre{position:relative;aspect-ratio:4/5;box-shadow:-18px 18px 0 -1px var(--pierre),-18px 18px 0 0 var(--or-ligne)}
+.vedette-cadre .defile img{object-position:50% 52%}
+@media (max-width:860px){
+  .vedette .wrap{grid-template-columns:1fr}
+  .vedette-photo{order:-1;max-width:460px;width:calc(100% - 18px);margin-left:18px}
+  .pyramide{grid-template-columns:1fr}
+  .pyramide div{border-right:0;margin-right:0;border-bottom:var(--filet);padding:16px 0}
+  .pyramide div:last-child{border-bottom:0}
+}
+@media (max-width:480px){.vedette .actions .btn{flex:1 1 100%}}
+
+/* La signature : portrait éditorial */
+.heros{padding:clamp(80px,11vw,160px) 0}
+.heros .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,120px);align-items:center}
+.heros .titre-heros{font-size:clamp(46px,6.4vw,92px);margin:22px 0 28px}
+.heros .titre-heros em{display:block}
+.heros p.chapo{font-size:17px;max-width:40ch}
+.heros .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.cadre{position:relative;order:-1}
+.cadre img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;box-shadow:18px 18px 0 -1px var(--marbre),18px 18px 0 0 var(--or-ligne)}
+
+.etiquette{position:static;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:30px;background:none}
+.etiquette b{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:.32em}
+.etiquette small{font-size:10.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--encre-douce)}
+
+/* Anneaux : la signature, tirée du monogramme */
+.sep{display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,32px);padding:8px var(--g);margin:0 auto;max-width:620px}
+.sep span{flex:1;height:1px;background:var(--or-ligne);opacity:.7}
+.sep img{width:72px;height:72px;flex:none}
+
+
+/* Sections claires */
+.sol-clair{background:var(--pierre)}
+.collection{padding:clamp(80px,11vw,160px) 0}
+.tete{display:grid;grid-template-columns:1.2fr .8fr;align-items:end;gap:40px;margin-bottom:64px;padding-bottom:40px;border-bottom:var(--filet)}
+.tete h2{margin-top:18px}
+.grille{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(18px,2.4vw,36px);row-gap:clamp(48px,6vw,80px)}
+.grille .carte{flex:0 1 calc((100% - 2*clamp(18px,2.4vw,36px))/3)}
+.carte{display:flex;flex-direction:column}
+.carte .visuel{aspect-ratio:3/4;background:var(--marbre-2);border:var(--filet);display:grid;place-items:center;position:relative;overflow:hidden}
+.carte .visuel img{width:100%;height:100%;object-fit:cover}
+
+.carte .visuel svg{width:38%;height:auto;transition:opacity .4s ease;opacity:.85}
+.carte:hover .visuel svg{opacity:1}
+.carte .visuel .attente{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--encre-douce)}
+.carte .info{padding:22px 0 0;display:flex;flex-direction:column;gap:4px;flex:1;text-align:center;align-items:center}
+.carte h3{letter-spacing:.3em;text-transform:uppercase;font-size:21px;font-weight:400;margin-bottom:6px}
+.carte .famille{font-size:10.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--or)}
+.carte .visuel img{object-position:50% 48%}
+/* Filtres de la collection */
+.filtres{scroll-margin-top:100px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 0 14px}
+.filtres button{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;min-height:44px;padding:0 18px;border:var(--filet);background:transparent;color:var(--encre-douce);cursor:pointer;transition:background .25s ease,color .25s ease,border-color .25s ease}
+.filtres button:hover{color:var(--encre);border-color:var(--encre)}
+.filtres button[aria-pressed="true"]{background:var(--encre);border-color:var(--encre);color:var(--marbre)}
+.compte{text-align:center;margin:0 auto 40px;font-size:13px;color:var(--encre-douce);max-width:none}
+.carte[hidden]{display:none}
+.voir-tous{display:flex;justify-content:center;margin-top:56px}
+.voir-tous[hidden]{display:none}
+.carte .plus{width:100%;margin-top:6px;border-top:var(--filet)}
+.carte .plus summary{list-style:none;cursor:pointer;padding:12px 0;font-family:var(--sans);line-height:1.4;text-align:center;font-size:10.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--or);position:relative}
+.carte .plus summary::-webkit-details-marker{display:none}
+.carte .plus summary::before{display:none}
+.carte .plus summary::after{content:"+";position:static;display:inline;width:auto;height:auto;background:none;transform:none;margin-left:8px;font-size:14px;line-height:1}
+.carte .plus[open] summary::after{content:"−"}
+.carte .plus .notes{margin-top:0}
+@media (max-width:480px){.filtres button{padding:0 12px;font-size:10px;letter-spacing:.12em;min-height:40px}}
+
+/* Défilement des photos : seul le visiteur le fait bouger */
+.defile{position:absolute;inset:0;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.defile::-webkit-scrollbar{display:none}
+.defile img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:start;scroll-snap-stop:always}
+.fleche{position:absolute;top:50%;width:36px;height:36px;margin-top:-18px;display:grid;place-items:center;border:1px solid var(--or-ligne);background:rgba(252,250,246,.92);color:var(--encre);cursor:pointer;z-index:2;transition:background .25s ease,color .25s ease}
+.fleche:hover{background:var(--encre);color:var(--marbre)}
+.fleche[disabled]{opacity:0;pointer-events:none}
+.fleche.prec{left:10px}.fleche.suiv{right:10px}
+.fleche svg{width:14px;height:14px}
+.points{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:7px;z-index:2}
+.points button{width:7px;height:7px;padding:0;border:1px solid var(--marbre);background:transparent;cursor:pointer;transform:rotate(45deg)}
+.points button[aria-current="true"]{background:var(--marbre)}
+@media (prefers-reduced-motion:reduce){.defile{scroll-behavior:auto}}
+.carte .honneur{font-size:9.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--marbre);background:var(--or);padding:3px 10px;margin-bottom:10px}
+.carte .accroche{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.3;color:var(--encre);margin:8px 0 6px}
+.carte .notes{width:100%;margin:8px 0 4px;border-top:var(--filet)}
+.carte .notes div{display:grid;grid-template-columns:52px 1fr;gap:10px;text-align:left;padding:9px 0;border-bottom:var(--filet);font-size:13px;line-height:1.45}
+.carte .notes dt{font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--or);padding-top:2px}
+.carte .notes dd{color:var(--encre-douce)}
+.carte .sillage{font-size:12.5px;margin-top:8px}
+.carte .cta-carte{margin-top:auto;padding-top:16px;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--encre);text-decoration:none;border-bottom:1px solid var(--or-ligne);padding-bottom:4px;transition:border-color .3s ease,color .3s ease}
+.carte .cta-carte:hover{color:var(--or);border-color:var(--or)}
+
+/* Comment commander */
+.etapes{padding:clamp(80px,11vw,160px) 0 clamp(60px,8vw,110px)}
+.etapes h2{margin-top:18px}
+.etapes ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;border-top:var(--filet)}
+.etapes li{padding:36px clamp(16px,3vw,44px) 0 0;border-right:var(--filet);margin-right:clamp(16px,3vw,44px)}
+.etapes li:last-child{border-right:0;margin-right:0}
+.etapes li .num{font-family:var(--serif);font-style:italic;font-weight:300;font-size:58px;color:var(--or);line-height:1}
+.etapes li h3{margin:20px 0 10px}
+
+/* Questions */
+.faq{padding:0 0 clamp(80px,11vw,160px)}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,8vw,120px)}
+.faq h2{margin-top:18px}
+details{border-bottom:var(--filet)}
+details:first-of-type{border-top:var(--filet)}
+summary{list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.3;color:var(--encre)}
+summary::-webkit-details-marker{display:none}
+summary::before,summary::after{content:"";position:absolute;right:8px;top:50%;width:14px;height:1px;background:var(--or)}
+summary::after{transform:rotate(90deg)}
+details[open] summary::after{transform:rotate(0)}
+details p{padding:0 0 24px}
+
+/* Commander */
+.commander{padding:clamp(90px,12vw,170px) 0;text-align:center;border-top:var(--filet)}
+.commander .logo-commander{display:block;width:min(120px,30vw);height:auto;margin:0 auto 34px}
+.commander h2{max-width:none;margin:22px auto 22px}
+.commander p{margin:0 auto}
+.commander .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:44px}
+.insta{margin-top:30px}
+.insta a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--encre);border-bottom:1px solid var(--or-ligne);padding-bottom:6px;transition:color .25s ease,border-color .25s ease}
+.insta a:hover{color:var(--or);border-color:var(--or)}
+.insta svg{width:17px;height:17px}
+
+footer{background:var(--pierre);border-top:var(--filet);padding:40px 0 44px;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--encre-douce)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+:focus-visible{outline:1px solid var(--or);outline-offset:4px}
+
+@media (max-width:1100px){
+  .liens{gap:24px}
+}
+@media (max-width:980px){
+  .grille .carte{flex-basis:calc((100% - clamp(18px,2.4vw,36px))/2)}
+  .faq .wrap,.tete{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .liens a:not(.btn){display:none}
+  .heros .wrap{grid-template-columns:1fr}
+  .heros .cadre{max-width:460px;width:calc(100% - 18px)}
+  .etapes ol{grid-template-columns:1fr}
+  .etapes li{border-right:0;margin-right:0;padding:30px 0;border-bottom:var(--filet)}
+  .etapes li:last-child{border-bottom:0}
+}
+@media (max-width:480px){
+  .marque{gap:10px}
+  .marque span{font-size:14px;letter-spacing:.16em;white-space:nowrap}
+  .marque img{width:32px;height:32px}
+  .nav .btn{padding:0 14px;letter-spacing:.16em}
+  .grille{gap:14px;row-gap:40px}
+  .grille .carte{flex-basis:calc((100% - 14px)/2)}
+  .carte h3{font-size:16px;letter-spacing:.2em}
+  .carte .notes div{grid-template-columns:1fr;gap:2px;text-align:center}
+  .carte .accroche{font-size:17px}
+  .heros .actions .btn,.legende .actions .btn{flex:1 1 100%}
+  .btn{letter-spacing:.12em;padding:0 18px;white-space:nowrap}
+  summary{font-size:20px}
+}
+@media (max-width:360px){.marque img{width:28px;height:28px}.marque{gap:8px}.marque span{font-size:12.5px;letter-spacing:.12em}.nav .btn{padding:0 10px;letter-spacing:.1em;font-size:10px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="fond" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="og" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="3.2">
+      <circle cx="46" cy="50" r="40"/>
+      <circle cx="54" cy="50" r="40"/>
+      <path d="M67.5 33.2A26 26 0 1 0 72 50H54v9"/>
+    </g>
+  </symbol>
+  <symbol id="tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6.6 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.1 6.1l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 20l1.2-4A8.5 8.5 0 1 1 8.4 19z"/><path fill="currentColor" d="M9.2 8.3c.3-.4.7-.4.9 0l.6 1.4c.1.3 0 .5-.2.7l-.4.4c.5 1 1.3 1.8 2.3 2.3l.4-.4c.2-.2.5-.3.7-.2l1.4.6c.4.2.4.6 0 .9-.6.7-1.5 1-2.4.6a7 7 0 0 1-3.7-3.7c-.4-.9-.1-1.8.4-2.6z"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="OG Parfumerie, retour en haut">
+      <img src="assets/logo-og.webp" width="40" height="40" alt="">
+      <span>OG Parfumerie</span>
+    </a>
+    <nav class="liens" aria-label="Navigation principale">
+      <a href="#sublime">Sublime</a>
+      <a href="#collection">La collection</a>
+      <a href="#faq">Questions</a>
+      <a class="btn" href="#commander">Commander</a>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+
+  <section class="film" id="film" aria-label="OG Parfumerie, extraits de parfum">
+    <div class="scene">
+      <div class="legende finale">
+        <p class="kicker">Extraits de parfum · Paris</p>
+        <h1>Un parfum, ça se remarque <em>de près.</em></h1>
+        <div class="actions">
+          <a class="btn js-tel" href="#commander"><svg><use href="#tel"/></svg>Appeler pour commander</a>
+          <a class="btn ligne" href="#collection">Voir la collection</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vedette" id="sublime" aria-labelledby="vedette-titre">
+    <div class="wrap">
+      <div class="vedette-texte">
+        <p class="kicker">À l’honneur</p>
+        <h2 id="vedette-titre">Sublime, <em>la crème brûlée sur la peau.</em></h2>
+        <p class="chapo">Un extrait ultra-gourmand, pour celles et ceux qui aiment les parfums chauds et sucrés. Il s’ouvre comme la cuillère qui brise le caramel, puis la vanille et la tonka enveloppent la peau. Le musc blanc fait durer le tout.</p>
+        <dl class="pyramide">
+          <div><dt>Tête</dt><dd>Sucre roux caramélisé, cassonade</dd></div>
+          <div><dt>Cœur</dt><dd>Vanille de Madagascar, fève tonka</dd></div>
+          <div><dt>Fond</dt><dd>Musc blanc</dd></div>
+        </dl>
+        <p class="vedette-tenue">Gourmand · Sillage prononcé, longue tenue</p>
+        <div class="actions">
+          <a class="btn js-tel" href="#commander"><svg><use href="#tel"/></svg>Commander Sublime</a>
+          <a class="btn ligne" href="#collection">Toute la collection</a>
+        </div>
+      </div>
+      <figure class="vedette-photo">
+        <div class="vedette-cadre" data-nom="Sublime">
+          <div class="defile">
+            <img src="assets/sublime-grand.jpg" width="1200" height="1796" loading="lazy" alt="Le flacon Sublime posé au bord de l’eau, son reflet dans la surface.">
+            <img src="assets/sublime-grand-2.jpg" width="1099" height="1986" loading="lazy" alt="Une crème brûlée au caramel craquelé, posée sur des gousses de vanille.">
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="heros sol-sombre">
+    <div class="wrap">
+      <div>
+        <p class="kicker">La signature</p>
+        <h2 class="titre-heros">Elegance, <em>porté de près.</em></h2>
+        <p class="chapo">OG Parfumerie fait des extraits. Plus concentrés qu’une eau de parfum, ils tiennent sur la peau et restent près de toi, pas dans tout l’ascenseur.</p>
+        <div class="actions">
+          <a class="btn js-tel" href="#commander"><svg><use href="#tel"/></svg>Appeler pour commander</a>
+          <a class="btn ligne" href="#collection">Voir la collection</a>
+        </div>
+      </div>
+      <figure class="cadre">
+        <img src="assets/portrait-elegance.jpg" width="1100" height="1360" alt="Un homme en t-shirt blanc devant un mur de briques tient le flacon Elegance devant son œil." loading="lazy">
+        <figcaption class="etiquette"><b>ELEGANCE</b><small>Extrait de parfum · Paris</small></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="sep" aria-hidden="true">
+    <span></span><img src="assets/logo-og.webp" width="72" height="72" alt="" loading="lazy"><span></span>
+  </div>
+
+  <section class="collection sol-clair" id="collection">
+    <div class="wrap">
+      <div class="tete">
+        <div>
+          <p class="kicker">La collection</p>
+          <h2>Dix-sept extraits, une maison.</h2>
+        </div>
+        <p>Chaque flacon porte le monogramme OG et la mention Paris. Choisis celui qui te ressemble, on s’occupe du reste au téléphone.</p>
+      </div>
+
+      <div class="filtres" role="group" aria-label="Filtrer la collection" hidden>
+        <button type="button" data-filtre="top" aria-pressed="true">Incontournables</button>
+        <button type="button" data-filtre="gourmand" aria-pressed="false">Gourmands</button>
+        <button type="button" data-filtre="floral" aria-pressed="false">Floraux</button>
+        <button type="button" data-filtre="boise" aria-pressed="false">Boisés &amp; ambrés</button>
+        <button type="button" data-filtre="frais" aria-pressed="false">Frais</button>
+        <button type="button" data-filtre="tous" aria-pressed="false">Tous</button>
+      </div>
+      <p class="compte" id="compte" aria-live="polite"></p>
+      <div class="grille" id="grille">
+        <article class="carte" data-familles="gourmand top">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-sublime.jpg" width="900" height="1347" loading="lazy" alt="Le flacon Sublime posé au bord de l’eau, son reflet dans la surface.">
+              <img src="assets/flacon-sublime-2.jpg" width="900" height="1626" loading="lazy" alt="Une crème brûlée au caramel craquelé, posée sur des gousses de vanille.">
+            </div>
+          </div>
+          <div class="info">
+            <p class="honneur">À l’honneur</p>
+            <h3>Sublime</h3>
+            <p class="famille">Gourmand</p>
+            <p class="accroche">Le caramel d’une crème brûlée, sur la peau.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Tête</dt><dd>Sucre roux caramélisé, cassonade</dd></div>
+                <div><dt>Cœur</dt><dd>Vanille de Madagascar, fève tonka</dd></div>
+                <div><dt>Fond</dt><dd>Musc blanc</dd></div>
+              </dl>
+              <p class="sillage">Sillage prononcé, longue tenue.</p>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander Sublime</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="boise top">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-royale.jpg" width="900" height="1300" loading="lazy" alt="Le flacon Royale posé sur un mur de pierre, devant une façade de château.">
+              <img src="assets/flacon-royale-2.jpg" width="900" height="1350" loading="lazy" alt="Une main tient le flacon Royale devant la façade d’un château.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Royale</h3>
+            <p class="famille">Fougère ambrée · Masculin</p>
+            <p class="accroche">Une ouverture épicée, puis le caramel et la cannelle.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Tête</dt><dd>Poivre rose, baie de genévrier, violette</dd></div>
+                <div><dt>Cœur</dt><dd>Toffee, cannelle, lavande, sauge, iris</dd></div>
+                <div><dt>Fond</dt><dd>Marron glacé, vanille, ambre, fève tonka, daim</dd></div>
+              </dl>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander Royale</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="boise top">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-oud-prestige.jpg" width="900" height="1188" loading="lazy" alt="Le flacon Oud Prestige posé sur une balustrade de pierre, sous un ciel bleu.">
+              <img src="assets/flacon-oud-prestige-2.jpg" width="736" height="1104" loading="lazy" alt="Gousses de vanille, tranches d’orange séchées, cannelle, épices et une loupe dorée, autour d’un flacon.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Oud Prestige</h3>
+            <p class="famille">Oud boisé</p>
+            <p class="accroche">Le fruit de la passion, puis le oud et le cuir.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Tête</dt><dd>Fruit de la passion, safran, rose de Turquie</dd></div>
+                <div><dt>Cœur</dt><dd>Bois de oud, benjoin du Laos, patchouli d’Indonésie</dd></div>
+                <div><dt>Fond</dt><dd>Cuir, bois d’akigala, ambre, vanille, ciste d’Espagne</dd></div>
+              </dl>
+              <p class="sillage">Sillage généreux, longue tenue.</p>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander Oud Prestige</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="gourmand top">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-hot-cherry.jpg" width="900" height="1160" loading="lazy" alt="Le flacon Hot Cherry posé sur un lit de cerises noires brillantes.">
+              <img src="assets/flacon-hot-cherry-2.jpg" width="900" height="1490" loading="lazy" alt="Des cerises noires couvertes de gouttes d’eau, en gros plan.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Hot Cherry</h3>
+            <p class="famille">Ambré gourmand</p>
+            <p class="accroche">La cerise noire, juteuse, et la liqueur de griotte.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Notes</dt><dd>Cerise noire, liqueur de griotte, amande amère, rose de Turquie, jasmin sambac, fève tonka torréfiée, baume du Pérou</dd></div>
+              </dl>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander Hot Cherry</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="boise top">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-l-exclusif.jpg" width="900" height="1364" loading="lazy" alt="Une main tient le flacon L’Exclusif devant une façade de verre où se reflètent des immeubles parisiens.">
+              <img src="assets/flacon-l-exclusif-2.jpg" width="736" height="1104" loading="lazy" alt="Un iris violet contre un morceau de bois brut, sur fond brun.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>L’Exclusif</h3>
+            <p class="famille">Boisé poudré</p>
+            <p class="accroche">Se distinguer, sans jamais en faire trop.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Tête</dt><dd>Aldéhydes, fève tonka</dd></div>
+                <div><dt>Cœur</dt><dd>Iris absolu, cèdre, jasmin sambac</dd></div>
+                <div><dt>Fond</dt><dd>Amande, santal blanc</dd></div>
+              </dl>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander L’Exclusif</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="gourmand boise top">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-1905.jpg" width="900" height="1196" loading="lazy" alt="Le flacon 1905 posé dans une eau dorée, entouré de paillettes d’or.">
+              <img src="assets/flacon-1905-2.jpg" width="736" height="736" loading="lazy" alt="Un verre de cognac posé sur une bûche, entouré de cannelle, de vanille, de fèves et d’un chocolat, sur du velours doré.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>1905</h3>
+            <p class="famille">Ambré vanillé</p>
+            <p class="accroche">Le cognac, puis les épices et le bois.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Tête</dt><dd>Cognac</dd></div>
+                <div><dt>Cœur</dt><dd>Épicé, boisé</dd></div>
+                <div><dt>Fond</dt><dd>Chaleureux, sucré</dd></div>
+              </dl>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander 1905</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="boise">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-elegance.jpg" width="900" height="1296" loading="lazy" alt="Le flacon Elegance posé sur un muret de pierre, devant une façade ancienne au soleil couchant.">
+              <img src="assets/portrait-elegance.jpg" width="1100" height="1360" loading="lazy" alt="Un homme en t-shirt blanc devant un mur de briques tient le flacon Elegance devant son œil.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Elegance</h3>
+            <p class="famille">Ambré boisé</p>
+            <p class="accroche">Vibrant et enveloppant, autour d’un cœur résineux et chaud.</p>
+            <a class="cta-carte js-tel" href="#commander">Commander Elegance</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="floral">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-mystere.jpg" width="900" height="1302" loading="lazy" alt="Le flacon Mystère posé sur un muret de marbre, à côté d’une plante aux feuilles violettes.">
+              <img src="assets/flacon-mystere-2.jpg" width="736" height="1070" loading="lazy" alt="Des pivoines roses, du jasmin et des citrons contre un morceau de bois, dans la lumière.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Mystère</h3>
+            <p class="famille">Floral fruité</p>
+            <p class="accroche">Joyeux, pétillant et gourmand.</p>
+            <a class="cta-carte js-tel" href="#commander">Commander Mystère</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="boise">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-te-amo.jpg" width="900" height="1092" loading="lazy" alt="Le flacon Te Amo glissé dans une serviette de lin, entre un couteau et une fourchette, avec une orchidée et des gousses de vanille.">
+              <img src="assets/flacon-te-amo-2.jpg" width="900" height="1142" loading="lazy" alt="Des gousses de vanille croisées et des fleurs blanches sur un fond pêche.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Te Amo</h3>
+            <p class="famille">Oriental boisé</p>
+            <p class="accroche">Poudré, crémeux, chaleureux.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Notes</dt><dd>Accord poudré, lys, santal crémeux de Mysore, ambrette, vanille</dd></div>
+              </dl>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander Te Amo</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="frais">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-efsane.jpg" width="900" height="1198" loading="lazy" alt="Une main tient le flacon Efsane, au jus bleu, devant un ciel bleu.">
+              <img src="assets/flacon-efsane-2.jpg" width="736" height="736" loading="lazy" alt="Un citron, une orange, des fleurs blanches, une gousse de vanille et un morceau de bois au soleil.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Efsane</h3>
+            <p class="accroche">Les agrumes de Sicile et de Calabre, au soleil.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Tête</dt><dd>Orange, citron de Sicile, bergamote de Calabre</dd></div>
+                <div><dt>Cœur</dt><dd>Fruits méditerranéens</dd></div>
+                <div><dt>Fond</dt><dd>Musc blanc, vanille de Madagascar, ambre</dd></div>
+              </dl>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander Efsane</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="floral boise">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-aslan.jpg" width="900" height="1182" loading="lazy" alt="Une main sort de la vitre d’une voiture beige et tend le flacon Aslan.">
+              <img src="assets/flacon-aslan-2.jpg" width="900" height="1428" loading="lazy" alt="Un morceau de bois sculpté dans une lumière ambrée, avec une volute de fumée blanche.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Aslan</h3>
+            <p class="famille">Floral boisé musqué</p>
+            <p class="accroche">Lacté et onctueux.</p>
+            <a class="cta-carte js-tel" href="#commander">Commander Aslan</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="floral gourmand">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-eternel.jpg" width="900" height="1122" loading="lazy" alt="Le flacon Éternel posé dans la terre d’un massif, entre des pensées blanches, jaunes et violettes.">
+              <img src="assets/flacon-eternel-2.jpg" width="736" height="1136" loading="lazy" alt="Fleurs d’oranger, zestes de citron, noix et miel dans une lumière dorée.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Éternel</h3>
+            <p class="famille">Floral gourmand</p>
+            <p class="accroche">La douceur de la guimauve, la lumière de la fleur d’oranger.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Notes</dt><dd>Guimauve, fleur d’oranger, néroli</dd></div>
+              </dl>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander Éternel</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="floral">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-ask.jpg" width="900" height="1172" loading="lazy" alt="Le flacon Aşk posé dans la terre, entre des pensées pourpres, jaunes et blanches.">
+              <img src="assets/flacon-ask-2.jpg" width="736" height="1304" loading="lazy" alt="Des voiles de soie ivoire et dorée qui ondulent dans la lumière.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Aşk</h3>
+            <p class="famille">Floral ambré · Féminin</p>
+            <p class="accroche">Élégant, avec un sillage qui se remarque.</p>
+            <a class="cta-carte js-tel" href="#commander">Commander Aşk</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="frais">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-evasion.jpg" width="900" height="1236" loading="lazy" alt="Le flacon Évasion posé sur un muret de pierre, devant un jardin au soleil.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Évasion</h3>
+            <p class="accroche">Une bouffée d’air pur sous le soleil.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Tête</dt><dd>Bigarade, petit-grain</dd></div>
+              </dl>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander Évasion</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="floral frais">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-evidence-2.jpg" width="736" height="1104" loading="lazy" alt="Un filet d’huile dorée qui coule sur un voile clair, entre des fleurs blanches et des amandes.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Évidence</h3>
+            <p class="famille">Floral contemporain</p>
+            <p class="accroche">Un bouquet lumineux de fleurs blanches.</p>
+            <details class="plus">
+              <summary>Voir les notes</summary>
+              <dl class="notes">
+                <div><dt>Notes</dt><dd>Fleurs blanches, agrumes frais, fond boisé et vanillé</dd></div>
+              </dl>
+            </details>
+            <a class="cta-carte js-tel" href="#commander">Commander Évidence</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="floral gourmand">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-ozel-2.jpg" width="736" height="1104" loading="lazy" alt="Des pétales de rose dans une coupelle, entourés de roses pêche, de fraises, de fleurs blanches et d’une gousse de vanille.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Özel</h3>
+            <p class="famille">Floral fruité gourmand · Féminin</p>
+            <p class="accroche">Poudré et réconfortant, un cocon de douceur.</p>
+            <a class="cta-carte js-tel" href="#commander">Commander Özel</a>
+          </div>
+        </article>
+        <article class="carte" data-familles="">
+          <div class="visuel">
+            <div class="defile">
+              <img src="assets/flacon-heritage.jpg" width="900" height="1226" loading="lazy" alt="Le flacon Héritage, au jus rosé, posé sur un muret de pierre au soleil, devant une balustrade et un palmier.">
+            </div>
+          </div>
+          <div class="info">
+            <h3>Héritage</h3>
+            <a class="cta-carte js-tel" href="#commander">Commander Héritage</a>
+          </div>
+        </article>
+      </div>
+      <div class="voir-tous" id="voir-tous" hidden><button type="button" class="btn ligne" data-filtre="tous">Voir les 17 parfums</button></div>
+    </div>
+  </section>
+
+
+  <section class="etapes sol-clair" id="comment">
+    <div class="wrap">
+      <p class="kicker">Commander</p>
+      <h2>Un appel, et c’est réglé.</h2>
+      <ol>
+        <li>
+          <div class="num">I</div>
+          <h3>Tu choisis</h3>
+          <p>Un nom de la collection, ou juste une envie. On t’aide à trouver le bon si tu hésites.</p>
+        </li>
+        <li>
+          <div class="num">II</div>
+          <h3>Tu appelles ou tu écris</h3>
+          <p>Par téléphone ou sur WhatsApp. Une vraie personne répond, pas un robot.</p>
+        </li>
+        <li>
+          <div class="num">III</div>
+          <h3>Tu le récupères</h3>
+          <p>En main propre. On convient ensemble du lieu et de l’heure.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="faq sol-clair" id="faq">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Questions</p>
+        <h2>Avant de commander.</h2>
+      </div>
+      <div>
+        <details>
+          <summary>Extrait ou eau de parfum, ça change vraiment quelque chose&#8239;?</summary>
+          <p>Oui. L’extrait contient plus d’huiles parfumées. Il dure plus longtemps et reste plus près de la peau. Tu en mets moins, et le flacon fait plus d’usage.</p>
+        </details>
+        <details>
+          <summary>Combien de temps il tient sur la peau&#8239;?</summary>
+          <p>Ça dépend de la peau et de la saison. Un extrait se sent en général toute la journée. Sur un vêtement, souvent jusqu’au lendemain.</p>
+        </details>
+        <details>
+          <summary>Comment je récupère mon parfum&#8239;?</summary>
+          <p>En main propre. Au téléphone ou sur WhatsApp, on convient ensemble du lieu et de l’heure. Pas de livraison pour l’instant.</p>
+        </details>
+        <details>
+          <summary>Je ne sais pas lequel choisir.</summary>
+          <p>Appelle ou écris sur WhatsApp, dis ce que tu portes d’habitude ou ce que tu aimes sentir chez les autres. On te conseille celui qui te va.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="commander sol-sombre" id="commander">
+    <div class="wrap">
+      <img class="logo-commander" src="assets/logo-og.webp" width="120" height="120" alt="" loading="lazy">
+      <p class="kicker">Commander</p>
+      <h2>Le tien <em>t’attend.</em></h2>
+      <p>Un appel ou un message suffit. On te conseille, puis on te le remet en main propre.</p>
+      <div class="actions">
+        <a class="btn js-tel" href="#commander"><svg><use href="#tel"/></svg>Appeler</a>
+        <a class="btn ligne js-wa" href="#commander"><svg><use href="#wa"/></svg>Écrire sur WhatsApp</a>
+      </div>
+      <p class="insta" id="insta" hidden><a href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ig"/></svg><span>Suivre OG Parfumerie sur Instagram</span></a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 OG Parfumerie · Extraits de parfum, Paris</span>
+  </div>
+</footer>
+
+<script>
+/* ÉTAPE MISE EN LIGNE 3 : mettre le numéro ici, format international sans espaces,
+   par exemple "+33612345678". Les boutons Appeler et WhatsApp se branchent tout seuls. */
+var PHONE = "+33769438242";
+var PHONE_AFFICHE = "07 69 43 82 42";
+/* Lien Instagram : mettre le nom du compte sans @, par exemple "ogparfumerie". Vide = lien caché. */
+var INSTAGRAM = "";
+
+(function(){
+  if (INSTAGRAM) {
+    var ig = document.getElementById("insta");
+    ig.querySelector("a").href = "https://www.instagram.com/" + INSTAGRAM.replace(/^@/, "") + "/";
+    ig.querySelector("span").textContent = "@" + INSTAGRAM.replace(/^@/, "") + " sur Instagram";
+    ig.hidden = false;
+  }
+  if (PHONE) {
+    var wa = "https://wa.me/" + PHONE.replace(/\D/g, "");
+    document.querySelectorAll(".js-tel").forEach(function(a){ a.href = "tel:" + PHONE; });
+    document.querySelectorAll(".js-wa").forEach(function(a){ a.href = wa; a.target = "_blank"; a.rel = "noopener"; });
+
+  }
+})();
+
+/* Défilement des photos dans les fiches */
+(function(){
+  var chevron = function(d){ return '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="'+(d<0?'M10 3 5 8l5 5':'M6 3l5 5-5 5')+'" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>'; };
+  document.querySelectorAll(".defile").forEach(function(defile){
+    var imgs = defile.querySelectorAll("img");
+    if (imgs.length < 2) return;
+    var visuel = defile.parentNode,
+        nom = visuel.dataset.nom || (visuel.parentNode.querySelector("h3") || {}).textContent || "le parfum";
+    visuel.setAttribute("role", "region");
+    visuel.setAttribute("aria-roledescription", "carrousel");
+    visuel.setAttribute("aria-label", "Photos de " + nom);
+    function aller(i){ defile.scrollTo({ left: i * defile.clientWidth }); }
+    function actuel(){ return defile.clientWidth ? Math.round(defile.scrollLeft / defile.clientWidth) : 0; }
+    var prec = document.createElement("button"), suiv = document.createElement("button");
+    prec.className = "fleche prec"; suiv.className = "fleche suiv";
+    prec.type = suiv.type = "button";
+    prec.setAttribute("aria-label", "Photo précédente"); suiv.setAttribute("aria-label", "Photo suivante");
+    prec.innerHTML = chevron(-1); suiv.innerHTML = chevron(1);
+    prec.addEventListener("click", function(){ aller(actuel() - 1); });
+    suiv.addEventListener("click", function(){ aller(actuel() + 1); });
+    var points = document.createElement("div"); points.className = "points";
+    var dots = Array.prototype.map.call(imgs, function(_, i){
+      var b = document.createElement("button"); b.type = "button";
+      b.setAttribute("aria-label", "Photo " + (i + 1) + " sur " + imgs.length);
+      b.addEventListener("click", function(){ aller(i); });
+      points.appendChild(b); return b;
+    });
+    visuel.appendChild(prec); visuel.appendChild(suiv); visuel.appendChild(points);
+    var dernier = -1;
+    function maj(){
+      var i = Math.max(0, Math.min(imgs.length - 1, actuel()));
+      if (i === dernier) return; dernier = i;
+      dots.forEach(function(d, k){ d.setAttribute("aria-current", k === i ? "true" : "false"); });
+      prec.disabled = i === 0; suiv.disabled = i === imgs.length - 1;
+    }
+    var attente = null;
+    defile.addEventListener("scroll", function(){ if (attente) return; attente = requestAnimationFrame(function(){ attente = null; maj(); }); }, { passive: true });
+    maj();
+  });
+})();
+/* Filtres de la collection : par défaut les incontournables */
+(function(){
+  var barre = document.querySelector(".filtres"),
+      cartes = Array.prototype.slice.call(document.querySelectorAll("#grille .carte")),
+      compte = document.getElementById("compte"),
+      voirTous = document.getElementById("voir-tous");
+  if (!barre) return;
+  barre.hidden = false;
+  var boutons = barre.querySelectorAll("button");
+  var noms = { top: "incontournables", gourmand: "gourmands", floral: "floraux", boise: "boisés et ambrés", frais: "frais", tous: "parfums" };
+  var seul = { top: "incontournable", gourmand: "gourmand", floral: "floral", boise: "boisé ou ambré", frais: "frais", tous: "parfum" };
+  boutons.forEach(function(b){
+    var f = b.dataset.filtre;
+    var n = f === "tous" ? cartes.length : cartes.filter(function(c){ return (" " + c.dataset.familles + " ").indexOf(" " + f + " ") > -1; }).length;
+    b.textContent += " (" + n + ")";
+  });
+  function filtrer(f, defiler){
+    var n = 0;
+    cartes.forEach(function(c){
+      var ok = f === "tous" || (" " + c.dataset.familles + " ").indexOf(" " + f + " ") > -1;
+      c.hidden = !ok; if (ok) n++;
+    });
+    boutons.forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.filtre === f ? "true" : "false"); });
+    compte.textContent = n + " " + (n > 1 ? noms[f] : seul[f]) + (f === "tous" ? " dans la collection" : "");
+    cartes.forEach(function(c){ if (!c.hidden) { var d = c.querySelector(".defile"); if (d) d.dispatchEvent(new Event("scroll")); } });
+    voirTous.hidden = f === "tous";
+    if (defiler) barre.scrollIntoView({ block: "start" });
+  }
+  boutons.forEach(function(b){ b.addEventListener("click", function(){ filtrer(b.dataset.filtre, false); }); });
+  voirTous.querySelector("button").addEventListener("click", function(){ filtrer("tous", true); });
+  filtrer("top", false);
+})();
+</script>
+</body>
+</html>
